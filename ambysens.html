@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<link rel="icon" href="favicon/">
+  <link rel="apple-touch-icon" sizes="57x57" href="favicon/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="favicon/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="favicon/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="favicon/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="favicon/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="favicon/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="favicon/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="favicon/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="favicon/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="favicon/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+  <link rel="manifest" href="/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+	
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<title>AmbYsenS</title>
+
+	<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+    <meta name="viewport" content="width=device-width" />
+	
+    <link href="bootstrap3/css/bootstrap.css" rel="stylesheet" />
+	<link href="assets/css/gsdk.css" rel="stylesheet" />  
+    <link href="assets/css/demo.css" rel="stylesheet" /> 
+    
+    <!--     Font Awesome     -->
+    <link href="bootstrap3/css/font-awesome.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Grand+Hotel' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/css?family=Raleway|Roboto+Condensed" rel="stylesheet">
+</head>
+<body>
+<div id="navbar-full">
+    <div class="container">
+        <nav class="navbar navbar-ct-blue navbar-transparent navbar-fixed-top" role="navigation">
+          
+          <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a href="http://noas.iitmandi.ac.in/">
+                     <div class="logo-container">
+                        <div class="logo">
+                            <img id = "noas_logo" src="images/logo_svg.svg">
+                        </div>
+                        <div class="brand">
+                            NOAS
+                        </div>
+                    </div>
+                </a>
+            </div>
+        
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+              <ul class="nav navbar-nav navbar-right">
+                    <li><a href="publications.html">Publications</a></li>
+                    <li><a href="people.html">People</a></li>
+                    <li class="projects">
+                      <a href="#" class="dropdown-toggle" data-toggle="dropdown">Projects<b class="caret"></b></a>
+                      <ul class="dropdown-menu">
+                        <li><a href="nRF.html">nRF Network</a></li>
+                        <li><a href="MQTT.html">MQTT</a></li>
+                        <li><a href="ambysens.html">AmbYsenS</a></li>
+                      </ul>
+                    </li>
+                    <li class="External Links">
+                      <a href="#" class="dropdown-toggle" data-toggle="dropdown">External Links<b class="caret"></b></a>
+                      <ul class="dropdown-menu">
+                        <li><a href="http://iitmandi.ac.in/Schools/SCEE">School</a></li>
+                        <li><a href="http://www.iitmandi.ac.in">Institute Home</a></li>
+
+                      </ul>
+                    </li>
+                    <!--<button class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+                      Launch demo modal
+                    </button>-->
+                    <li><button href="#gsdk" class="btn btn-round btn-default" data-toggle="modal" data-target="#myModal">Contact Us</button></li>
+                    
+               </ul>
+              
+            </div>
+          </div><!-- /.container-fluid -->
+        </nav>
+    </div><!--  end container-->
+    
+    <div class='blurred-container'>
+        
+        <div class="img-src" style="background-image: url('assets/img/cover_4.jpg')"></div>
+        <div class='img-src blur' style="background-image: url('assets/img/cover_4_blur.jpg')"></div>
+    </div>
+    
+</div>     
+
+<div class="main">
+    <div class="container tim-container" style="max-width:800px; padding-top:100px">
+       
+       <h1 class="text-center" >AmbYsenS &ndash; A standalone sensor node</h1>
+	<h3>This project was done by T. Pratik. His project report can be found <a href="reports/pratik.pdf">here</a>.</h3>
+	<p>A NodeMCU may be small, but it is a networking powerhouse. So, we have created <b>AmbYsenS</b>. To exploit its capabilities a Node-MCU was programmed to start an Access-point, and host a webpage which displayed the temperture and humidity readings of the room in which it was present. When it is powered up,it sets up an AP currently named as <b>AmbYSensE</b> with default password <i>123456789</i>. Visit the IP <tt>192.168.4.1</tt> to see it working.</p>
+	<p>The code is available <a href="codes/NODE-MCU-SENSOR-SERVER-V2.ino">here</a>. This code invokes <tt>server.on()</tt> function whenever the &lsquo;&lsquo;UPDATE" button is clicked.</p>
+	<br>
+	<br>
+	<div align="center">
+		<img src="images/amby.png" alt="AmbYsenS" width="80%" height="80%" />
+		<p><i><div align="center"> Fig 1: AmbYsenS webpage </div></i></p>
+	</div>
+       
+    </div>
+
+    <div class="row">
+            <div class="col-md-6">
+                
+                <!-- Modal -->
+                <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        <h4 class="modal-title" id="myModalLabel">Contact Form</h4>
+                      </div>
+                      <div class="modal-body">
+                        
+                          <div class="form-group">
+                            <input type="text" value="" placeholder="Name" class="form-control" />
+                          </div>  
+
+                          <div class="form-group">
+                            <input type="text" value="" placeholder="Contact Number" class="form-control" />
+                          </div>
+
+                          <div class="form-group">
+                            <input type="text" value="" placeholder="Email-ID" class="form-control" />
+                          </div>        
+                        
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-default btn-simple" data-dismiss="modal">Close</button>
+                        <div class="divider"></div>
+                        <button type="button" class="btn btn-info btn-simple">Save</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>    
+   			</div>
+ 	  </div>
+ </div>
+
+    
+
+</body>
+
+    <script src="jquery/jquery-1.10.2.js" type="text/javascript"></script>
+	<script src="assets/js/jquery-ui-1.10.4.custom.min.js" type="text/javascript"></script>
+
+	<script src="bootstrap3/js/bootstrap.js" type="text/javascript"></script>
+	<script src="assets/js/gsdk-checkbox.js"></script>
+	<script src="assets/js/gsdk-radio.js"></script>
+	<script src="assets/js/gsdk-bootstrapswitch.js"></script>
+	<script src="assets/js/get-shit-done.js"></script>
+    <script src="assets/js/custom.js"></script>
+
+<script type="text/javascript">
+         
+    $('.btn-tooltip').tooltip();
+    $('.label-tooltip').tooltip();
+    $('.pick-class-label').click(function(){
+        var new_class = $(this).attr('new-class');  
+        var old_class = $('#display-buttons').attr('data-class');
+        var display_div = $('#display-buttons');
+        if(display_div.length) {
+        var display_buttons = display_div.find('.btn');
+        display_buttons.removeClass(old_class);
+        display_buttons.addClass(new_class);
+        display_div.attr('data-class', new_class);
+        }
+    });
+    $( "#slider-range" ).slider({
+		range: true,
+		min: 0,
+		max: 500,
+		values: [ 75, 300 ],
+	});
+	$( "#slider-default" ).slider({
+			value: 70,
+			orientation: "horizontal",
+			range: "min",
+			animate: true
+	});
+	$('.carousel').carousel({
+      interval: 4000
+    });
+      
+    
+</script>
+</html>

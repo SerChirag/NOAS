@@ -1,0 +1,507 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<link rel="icon" href="favicon/">
+  <link rel="apple-touch-icon" sizes="57x57" href="favicon/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="favicon/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="favicon/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="favicon/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="favicon/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="favicon/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="favicon/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="favicon/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="favicon/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="favicon/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+  <link rel="manifest" href="/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+	
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<title>MQTT</title>
+
+	<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+    <meta name="viewport" content="width=device-width" />
+	
+    <link href="bootstrap3/css/bootstrap.css" rel="stylesheet" />
+	<link href="assets/css/gsdk.css" rel="stylesheet" />  
+    <link href="assets/css/demo.css" rel="stylesheet" /> 
+    
+    <!--     Font Awesome     -->
+    <link href="bootstrap3/css/font-awesome.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Grand+Hotel' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/css?family=Raleway|Roboto+Condensed" rel="stylesheet">
+</head>
+<body>
+<div id="navbar-full">
+    <div class="container">
+        <nav class="navbar navbar-ct-blue navbar-transparent navbar-fixed-top" role="navigation">
+          
+          <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a href="http://noas.iitmandi.ac.in/">
+                     <div class="logo-container">
+                        <div class="logo">
+                            <img id = "noas_logo" src="images/logo_svg.svg">
+                        </div>
+                        <div class="brand">
+                            NOAS
+                        </div>
+                    </div>
+                </a>
+            </div>
+        
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+              <ul class="nav navbar-nav navbar-right">
+                    <li><a href="publications.html">Publications</a></li>
+                    <li><a href="people.html">People</a></li>
+                    <li class="projects">
+                      <a href="#" class="dropdown-toggle" data-toggle="dropdown">Projects<b class="caret"></b></a>
+                      <ul class="dropdown-menu">
+                        <li><a href="nRF.html">nRF Network</a></li>
+                        <li><a href="MQTT.html">MQTT</a></li>
+                        <li><a href="ambysens.html">AmbYsenS</a></li>
+                      </ul>
+                    </li>
+                    <li class="External Links">
+                      <a href="#" class="dropdown-toggle" data-toggle="dropdown">External Links<b class="caret"></b></a>
+                      <ul class="dropdown-menu">
+                        <li><a href="http://iitmandi.ac.in/Schools/SCEE">School</a></li>
+                        <li><a href="http://www.iitmandi.ac.in">Institute Home</a></li>
+
+                      </ul>
+                    </li>
+                    <!--<button class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+                      Launch demo modal
+                    </button>-->
+                    <li><button href="#gsdk" class="btn btn-round btn-default" data-toggle="modal" data-target="#myModal">Contact Us</button></li>
+                    
+               </ul>
+              
+            </div>
+          </div><!-- /.container-fluid -->
+        </nav>
+    </div><!--  end container-->
+    
+    <div class='blurred-container'>
+        
+        <div class="img-src" style="background-image: url('images/parallax.jpg')"></div>
+        <div class='img-src blur' style="background-image: url('images/parallax_blur.jpg')"></div>
+    </div>
+    
+</div>     
+
+<div class="main">
+    <div class="container tim-container" style="max-width:800px; padding-top:100px">
+       <h1 class="text-center">MQTT and Campus-wide heterogeneous Wireless Sensor Network</h1>
+       <br>
+       <br>
+       <h3>This project was done by T. Pratik. His project report can be found <a href="reports/pratik.pdf">here</a>.</h3>
+	   <h2>Goal</h2>
+		<p>Build a wireless sensor network (WSN) for environment monitoring with different hardwares that can communicate with each other using MQTT protocol.</p>
+		<h2>Getting started</h2>
+		<p>For this project, we used the following hardware and software</p>
+
+		<table class="table table-hover">
+
+			<thead class="thead-inverse">
+			    <tr>
+			      <td class="c1"><b>Hardware </b></td>
+                  <td class="c2"><b>Software </b></td>
+			    </tr>
+		  	</thead>
+			<tr class="r2">
+				<td class="c1"><a href="https://www.raspberrypi.org/">Raspberry Pi</a> Model 3B(built-in WiFi) &ndash; 1 no </td>
+				<td class="c2"> Arduino IDE </td>
+			</tr>
+			<tr class="r3">
+				<td class="c1"><a href="http://nodemcu.com">NodeMCU (built-in WIFi ESP-12e)</a> &ndash; 2 nos  </td><td class="c2"> Waspmote IDE </td>
+			</tr>
+			<tr class="r4">
+				<td class="c1">Arduino Nano with WiFi(<a href="http://esp8266.net/">ESP8266</a>) &ndash; 2 nos </td>
+				<td class="c2"> Python </td></tr>
+			<tr class="r5">
+				<td class="c1"><a href="http://www.libelium.com/libeliumworld/waspmote/">Waspmotes</a> with XBee S1(IEEE-802.15.4) &ndash; 2 nos </td>
+				<td class="c2"> <a href="https://www.digi.com/resources/documentation/digidocs/90001526/tasks/t_download_and_install_xctu.html">XCTU</a> </td></tr>
+			<tr class="r6">
+				<td class="c1">WiSense buit-in CC2520(ZigBee,IEEE-802.15.4) &ndash; 2 nos </td>
+				<td class="c2"> <a href="https://mosquitto.org/">Mosquitto</a></td>
+			</tr>
+
+		</table>
+		<h2>A quick introduction of MQTT </h2>
+		<p><a href="http://docs.oasis-open.org/mqtt/mqtt/v3.1.1/os/mqtt-v3.1.1-os.html">MQTT</a> (MQ Telemetry Transport or Message Queue Telemetry Transport) is a publish-subscribe-based <i>lightweight</i> messaging protocol for use on top of the TCP/IP protocol</p>
+		
+
+		<div align="center">
+			<img src="images/mqtt.jpg" alt="MQTT" width="600px" height="330px" align="middle"/>
+			<p><i><div align="center">Fig 1: MQTT communication </div></i></p>
+			<br>
+			<br>
+			<br>
+		</div>
+
+		<p>MQTT defines methods (sometimes referred to as verbs) to indicate the desired action to be performed on the identified resource. What this resource represents, whether pre-existing data or data that is generated dynamically, depends on the implementation of the server. Often, the resource corresponds to a file or the output of an executable residing on the server</p>
+		<ul>
+			<li><p><b>Connect</b>: Waits for a connection to be established with the server.</p>
+			</li>
+		</ul>
+		<ul>
+			<li><p><b>Disconnect</b>: Waits for the MQTT client to finish any work it must do, and for the TCP/IP session to disconnect.</p>
+			</li>
+			</ul>
+		<ul>
+		<li><p><b>Subscribe</b>: Waits for completion of the Subscribe or UnSubscribe method.</p>
+		</li>
+		</ul>
+		<ul>
+		<li><p><b>UnSubscribe</b>: Requests the server unsubscribe the client from one or more topics.</p>
+		</li>
+		</ul>
+		<ul>
+		<li><p><b>Publish</b>: Returns immediately to the application thread after passing the request to the MQTT client. </p>
+		</li>
+		</ul>
+		<p>MQTT is a device to device communication protocol using publish-subscribe model, consists of two main parts <i>Broker</i> and <i>Clients</i>. 
+		The Broker hosts an MQTT server and a Client may be a sensor or an actuator  .</p>
+		<p>A client containing data publishes to the broker under a topic name, and a client interested in the data subscribes to the same topic name to get the data.</p>
+		<h2>Raspberry Pi as MQTT broker (server)</h2>
+
+		<p>A raspberry-Pi(Rpi) is a microprocessor embedded prototyping device. It has many versions, in this project we have used Rpi-3 which is powered by a 1.2GHz ARM Cortex A5 processor, has 1GB RAM, has inbuilt Bluetooth &amp; WiFi, 4 USB ports and it can run a variety of operating systems including Windows and Linux. Hence, it can be considered as a small computer. We installed Raspbian Jessie, which is a flavour of Linux.</p>
+		<p>A Raspberry-pi was made the broker by installing mosquitto broker, which is a open source MQTT broker mainly used for research purpose. The broker always runs in the background and is started automatically on startup.</p>
+
+		<div align="center">
+			<img src="images/raspberrybroker.png" alt="Raspberry Pi broker" width="600px" height="330px" />
+			<p><i><div align="center">Fig 2: The Raspberry-Pi which runs the Broker</div></i></p>
+		</div>
+
+
+
+		<p class="caption_figure">
+			<i></i>
+		</p>
+
+		<h2>Waspmotes as MQTT client</h2>
+		
+		<p>As mentioned earlier the waspmotes were sending data to the coordinator, the coordinator was attached to the Raspberry-pi and through serial communication, the data sent by the nodes were read.</p>
+		
+		<p>A python <a href="codes/MQTT/xbeesubscribe.py">MQTT-forwarder script</a> was written, which read the incoming packets and forwarded them to the broker under respective topic names.</p>
+		
+		<p>To transmit the data from the Waspmotes, first we need to run the <a href="codes/MQTT/waspmoteXBeeconfig.pde">waspmoteXBeeconfig.pde</a> script. Once the configuration is done <a href="codes/MQTT/WaspMoteXbeedatasending.pde">WaspMoteXbeedatasending.pde</a> need to be executed in the Waspmotes. Waspmote codes were jointly written by T. Pratik and G. K. Sriharsha.</p>
+		
+		<p class="note_bold"><b>NOTE</b>: </p>
+		<ul>
+		<li><p>While configuring XBee network, panID should match the one coded in the coordinator through XCTU.</p>
+		</li>
+		<li><p>If you are using external XBee boards, then you may need an XBee breakout board (also known as explorer).</p>
+		</li>
+		</ul>
+		<h2>Arduino nano + ESP8266 as MQTT client</h2>
+		<p>For implementing MQTT with Arduino we chose Arduino Nano due to its small size and less power consumption, in comparsion to Arduino UNO.
+		For connectivity we attached ESP8266 to them for WiFi capability. Using <a href="https://github.com/knolleary/pubsubclient">PubSubClient library</a> which is a light weight MQTT library for Arduino, the Arduinos were able to directly publish their data to the broker in <a href="https://tools.ietf.org/html/draft-jennings-senml-10">SenML</a> format, and the were able to publish their data from anywhere within the campus wherever <i>IITMandiWiFi</i> was available, and a node kept at IITMandi South campus can also publish data to the broker kept at IITMandi North campus.</p>
+		
+		<div align="center">
+			<img src="images/nanoesp.jpg" alt="Nano with ESP" width="600px" height="500px" />
+			
+			<p><i><div align="center"> Fig 3: Arduino-Nanos with ESP8266 implementing MQTT</div> </i></p>
+			<br>
+			<br>
+			<br>
+		</div>
+
+		<p><b>Additional instructions related to this code</b>: </p>
+		<ul>
+		<li><p>Connect the ESP8266 as shown in the photo</p>
+		</li>
+		<li><p>SSID and password should be checked.</p>
+		</li>
+		<li><p>Sleep time can be changed by modifying the &lsquo;&lsquo;sleeptime" variable.</p>
+		</li>
+		<li><p>Inside <tt>reconnect()</tt> function for the <tt>client.connect()</tt> function, we need to specify unique client id. For this code it is set as <i>NaNo_01</i>.</p>
+		</li>
+		<li><p>Provide the address of the broker in  the <tt>IPAddress server()</tt> function.</p>
+		</li>
+		<li><p>The following libraries were used in this code:</p>
+		</li>
+		</ul>
+		<div class="codeblock">
+		<div class="blockcontent"><pre>
+		#include &lt;WiFiEsp.h&gt;
+		#include &lt;WiFiEspClient.h&gt;
+		#include &lt;WiFiEspUdp.h&gt;
+		#include "SoftwareSerial.h"
+		#include &lt;PubSubClient.h&gt;
+		#include "LowPower.h"
+		#include&lt;ArduinoJson.h&gt;
+		#include"DHT.h"
+		</pre></div></div>
+		<p>The first four libraries enables the nano to establish a WiFi connection through ESP. <tt>SofwareSerial.h</tt> is required for the connection between nano and ESP board. <tt>PubsubClient.h</tt> is for MQTT. LowPower is for sleep mode. ArduinoJson.h for creating as well as parsing data in JSON format. </p>
+		<ul>
+		<li><p>The following line publishes the data to the broker. Also, <i>true</i> ensures that the packet will be retained by the broker. It basically ensures that the broker should keep this packet under this topic name till a new packet under this topic name has arrived.</p>
+		</li>
+		</ul>
+		<p><tt>client.publish(&ldquo;IITMandi/COMLab/Nano01/temperature&rdquo;,pl,true)</tt></p>
+		<p class="note_bold"><b>NOTE: that donot connect ESP8266 directly to the Arduino nanos as they operate on different voltage levels (3.3V vs 5V). To avoid any damage either use voltage regular circuit or a breakout board</b>. </p>
+		<h2>NODE-MCU as MQTT client</h2>
+		<p>Just to add a variety ,two NODE-MCUs were also programmed to publish their data to the broker. They can also publish their data from anywhere within thw campus wherever <i>IITMandiWiFi</i> is available.</p>
+		
+
+		<div align="center">
+			<img src="images/nodemcu.jpeg" alt="NodeMCU" width="600px" height="500px" />
+
+			<p><i><div align="center">Fig 4: NodeMCU implementing MQTT </div></i></p>
+			<br>
+			<br>
+			<br>
+		</div>
+		<p>The code can be found <a href="codes/MQTT/nodemcu-mqtt-json.ino">here</a>. The code is similar to the one that is written for Arduino nanos with external ESP boards. However, the implementation of sleep mode is different as the NodeMCU is directly connected to the ESP8266 and therefore implement <tt>ESP.deepSleep( )</tt> function included in </p>
+		<p><tt>#include&lt;ESP8266WiFi.h&gt;</tt></p>
+		<h2>Arduino nano + Xbee S2 as MQTT client</h2>
+		<p>An arduino Nano along with an XBee S2 radio running 802.15.4 firmware, was programmed with proper configuration to add it to the network of Waspmotes, since it also sent sensor data to the same coordinator to which Waspmote node were sending, it can be said that the Arduino is also now a part of the Waspmote network, hence we achieved interoperability with devices manufactured from multiple manufacturers.</p>
+		<p>First, the XBee radio was configured with XCTU to set the Channel number, Network PanID ,API mode and Endpoint point, then it was directly attached to the arduino for serial communication using Arduino XBee library.  </p>
+		
+		<div align="center">
+			<img src="images/xctu.png" alt="XCTU" width="500px" height="370px" />
+			<p ><i><div align="center"> Fig 5: An XCTU interface </div></i></p>
+		</div>
+
+		<h3>Configuring external XBee module : </h3>
+		<ul>
+		<li><p>XCTU need to be installed (available in the digi website). Need to configure so that it can read from serial port. Details can be found in this <a href="https://www.digi.com/resources/documentation/Digidocs/90001110-88/tasks/t_download_and_install_xctu_linux.htm">link</a></p>
+		</li>
+		<li><p>Follow the link to download and perform <tt>chmod</tt> and then run it.</p>
+		</li>
+		<li><p>Useful <a href="https://www.youtube.com/watch?v=odekkumB3WQ">youtube links</a> regarding XCTU.</p>
+		</li>
+		</ul>
+		<h2>WiSense nodes as MQTT client</h2>
+		<p>AS there was no MQTT library for the WiSense nodes, similar to Waspmotes, a forwarder script was used to post the data received from WiSense nodes.</p>
+		
+		<div align="center">
+			<img src="images/wisenseco-od.jpeg" alt="WiSense Coordinator" width="60%" height="60%px" />
+			<img src="images/wisensenode.jpeg" alt="WiSense node" width="60%" height="60%" />
+			<p class="caption_figure"><i><div align="center">Fig 6: WiSense coordinator and sensor node</div></i></p>
+		</div> 
+		<h2>Implementing sleep modes</h2>
+		<ul>
+		<li><p>Since the waspmotes are industrial grade sensor nodes , so they have inbuilt codes for implementing the best suited sleepmode for optimal use, hence we just included those codes to implement sleepmodes in them.</p>
+		</li>
+		<li><p>The Arduino Nano has a variety of sleep modes to choose from, each having its own advantages and limitations, so we chose the deep-sleep mode, to achieve maximum power saving, since in this mode everything is turned off and the device can only comeout of sleep mode either by external reset or watchdog timer interrupt .</p>
+		</li>
+		<li><p>The Node-MCUs also have deep sleep modes similar to Arduinos, for them also deep sleep mode was chosen and they automatically turn their WiFi radio off when in sleep mode .</p>
+		</li>
+		<li><p>The nodes implement a cycle in which, they read the sensor values, publish it, go to sleep, wake-up and continue.</p>
+		</li>
+		</ul>
+		<p class="note_bold"><b>NOTE: The Arduinos along with ESP8266 radios, donot save much power mainly due to the <i>power</i> LED which is always on .So in order to take full advantage of sleep mode, it is advisable to get rid of them by desoldering.</b></p>
+
+		<h2>Integration, Experimental evaluation and Result</h2>
+		<p>The network consists of a central broker(Raspberry-Pi) and 8 clients (final network didn't haveS Arduino nano + Xbee client).</p>
+		<p>2 Waspmotes and WiSense nodes transmit data to their respective coordinator which later get published in to the broker with the help of a forwarder script. 2 Arduino Nano with ESP-8266 WiFi radios and 2 Node-MCUs publish directly to the broker.</p>
+		<p>Each of their payload consists of SenML-JSON format, as following :</p>
+		<p><tt>{*&lsquo;bn&rsquo;:&lsquo;location/name of node&rsquo;;&lsquo;e&rsquo;:[&lsquo;n&rsquo;:&lsquo;parameter name&rsquo;,&lsquo;u&rsquo; :&lsquo;Parameter unit&rsquo;,&lsquo;v&rsquo;:&lsquo;value&rsquo;]}</tt></p>
+		<p>from which <b>topic</b> name can be extracted as : <tt>String(value(bn) + value(parameter))</tt></p>
+		<p class="note_bold"><b>NOTE:  Currently substitute <tt>IITMandi/COMLab</tt> in place of <i>location</i></p>
+		<p>By installing MQTT client software mosquitto (we tested with paho mqtt client), connecting to the Broker and subscribing to this <b>topic</b> will give you the live readings of the sensors.</b></p>
+
+		<div align="center"><img src="images/workingmqtt.png" alt="MQTT terminal display" width="500px" height="300px" /> 
+		
+		<p><i class="caption_figure"><div align="center">Fig 7: MQTT client displaying data from all sensor nodes </div></i></p></div>
+		<br>
+		<br>
+		<p>The above readings are of a client which has subscribed to every topic on the broker. This is done using <tt>IITMandi/COMlab/#</tt> . </p>
+		<h3>How to subscribe to the MQTT broker?</h3>
+		<p>Once you have installed <i>mosquitto</i> client, you can type the following command to subscribe to the broker</p>
+		<div class="infoblock">
+		<div class="blockcontent">
+		<p>$ mosquitto_sub -h &lt;host ip&gt; -t &lt;topic id&gt;/ wildcards+</p>
+		</div></div>
+		<p>where valid wild cards are #, +</p>
+		<h3>Remotely Enabling/Disabling sensors</h3>
+		<ul>
+		<li><p>One of the NodeMCUs was programmed to demonstrate remote enabling/disabling of sensors.</p>
+		</li>
+		<li><p>It subscribes to the topic <tt>settings</tt>, which contains instructions to enable or disable a sensor ,which is published by the administrator.</p>
+		</li>
+		<li><p>We could not achieve this whilst implementing sleep mode, and the reason for this is not clear, but it is suspected that due to the inability of PubSubClient library to allow a persistent connection with the broker, it may be so.</p>
+		</li>
+		<li><p>In a persistent connection, the broker queues the messages for a client which have not been received and acknowledged by it, due to disconnection or network problems. Upon reconnection, broker tries to resend these messages.</p>
+		</li>
+		</ul>
+		<p>The code can be found <a href="codes/MQTT/node-mcu-mqtt-json-subscribe.ino">here</a>. Using the &lsquo;&lsquo;client.subscribe(&lsquo;&lsquo;settings&ldquo;)&rdquo; function this code allows the nodeMCUs receive setting related data under the &lsquo;&lsquo;settings" topic.</p>
+		<p class="note_bold"><b>NOTE: To prevent loss of packets due to sleep modes, sleep mode is not implemented in this code.</b></p>
+		<h2>Visualization</h2>
+		<p>The aim was to take live sensor readings and plot them graphically as and when the are updated. </p>
+		<h3>Offline plot</h3>
+		<p>A local liveplot was created using matplotlib, which can be used within the IITMandi campus to view live updates, which uses subgraphs and the common attributes from different sensors are plotted on the same subgaph graph. For Example: Temperature readings from sensor node-1 and node-2 are plotted on the same subgraph with different colours to make comparison easier. </p>
+		<h3>Online plot</h3>
+		<p>In the first, whenever a new row of data was written into the <i>.csv</i> file, it was sent to thingspeak channel(a cloud service), where graphs were plotted automatically. </p>
+		<div align="center"> 
+			<img src="images/offlineliveplot.png" alt="100%" width="60%" />
+			<img src="images/onlineliveplot.png" alt="60%" width="60%" />
+			<p><i><div align="center"> Fig 8: Offline and Online plot </div></i></p>
+		</div>
+		<h3>Python codes and instructions for plotting</h3>
+		<ul>
+		<li><p><b>Uploading the data directly from the raspberry pi</b>: For uploading the data to thingspeak server, <a href="codes/MQTT/server_liveplot.py">server_liveplot.py</a> need to be run at the back in the Raspberry Pi. In this code, you need to provide the text file in which data is getting stored.</p>
+		</li>
+		<li><p><b>Uploading the data through a client that is connected to raspberry pi</b> <i>(was developed to due to the proxy issue)</i>: In this case, we need to run the <a href="codes/MQTT/server_liveplot.py">server_liveplot.py</a> in  Rpi and <a href="codes/MQTT/client_liveplot.py">client_liveplot.py</a> in the client computer. As before the <tt>server_liveplot.py</tt> should be linked to the text file where the data is getting logged. <tt>client_liveplot.py</tt> needs ip address of the server (can prompt for that, if required).</p>
+		</li>
+		<li><p>Finally, execute <a href="codes/MQTT/updatethingspeak.py">updatethingspeak.py</a> (which requires proxy setting (line 5 – 7)) to upload the data to thingspeak server. This also reads from the same text file where the sensor data is getting logged. It requires channel Key if you are using <tt>urllib2()</tt>. However, only channel id is required if you are posting through thingspeak library.</p>
+		</li>
+		<li><p>You have to execure <a href="codes/MQTT/client_update_thingspeakfor_raspberry.py">client_update_thingspeakfor_raspberry.py</a> in case you are not able to upload the data directly from the raspberry pi. You need to run <tt>server_liveplot.py</tt> at the raspberry pi. Configuration is similar to the <tt>client_liveplot.py</tt>.</p>
+		</li>
+		</ul>
+		<p class="note_bold"><b>NOTE: In some of the scripts, you need to uncomment it to upload the data to thingspeak server.</b></p>
+		<p><b>Additional data manipulation scripts</b></p>
+		<ul>
+		<li><p><a href="codes/MQTT/data.py">data.py</a>: creates .csv file from the logged data.</p>
+		</li>
+		<li><p><a href="codes/MQTT/interactiveplot.py">interactiveplot.py</a>: It takes the data from the drop down menu and plots for a single date.</p>
+		</li>
+		<li><p><a href="codes/MQTT/demotable.py">demotable.py</a>: for creating tables; reads from .csv file (line 6 indicates number of rows).</p>
+		</li>
+		<li><p><a href="codes/MQTT/GUI_plot.py">GUI_plot.py</a>: previous version of interactiveplot.py</p>
+		</li>
+		</ul>
+		<h2>Conclusion and future work</h2>
+		<p>We have build a heterogeneous WSN where communication between sensor to coordinator or coordinator to sensor is done through the MQTT protocol. This framework not only allows us to receive data from sensor nodes communicating through different radio modules, but also can be used to change the setting sensor nodes by issuing a command under the appropriate topic name. In future, we intend to address the following:</p>
+		<ul>
+			<li><p>Adding actuators to the network.</p>
+			</li>
+			<li><p>Make the nodes power efficient by removing LEDs and implementing sleep modes</p>
+			</li>
+			<li><p>Deployment and Field testing.</p>
+			</li>
+		</ul>
+		<h2>References</h2>
+		<ul>
+			<li><p>MQTT: https:<i></i>github.com<i>mqtt</i>mqtt.github.io/wiki</p>
+			</li>
+			<li><p>MQTT v.3:http:<i></i>docs.oasis-open.org<i>mqtt</i>mqtt<i>v3.1.1</i>os/mqtt-v3.1.1-os.html}</p>
+			</li>
+			<li><p>ESP8266  {http:<i></i>esp8266.net/}</p>
+			</li>
+			<li><p>NODEMCU  {http:<i></i>nodemcu.com/index_en.html}</p>
+			</li>
+			<li><p>Python-Matplotlib documentation  {https:<i></i>matplotlib.org/contents.html}</p>
+			</li>
+			<li><p>Waspmotes  {http:<i></i>www.libelium.com<i>libeliumworld</i>waspmote/}</p>
+			</li>
+			<li><p>SenML  {https:<i></i>tools.ietf.org<i>html</i>draft-jennings-senml-10}</p>
+			</li>
+			<li><p>Arduino MQTT library  {https:<i></i>github.com<i>knolleary</i>pubsubclient}</p>
+			</li>
+			<li><p>Mosquitto broker  {https:<i></i>mosquitto.org<i>download</i>}</p>
+			</li>
+			<li><p>Arduino JSON  {https:<i></i>github.com<i>bblanchon</i>ArduinoJson}</p>
+			</li>
+			<li><p>XCTU https:<i></i>www.digi.com<i>resources</i>documentation<i>digidocs</i>90001526<i>tasks</i>t_download_and_install_xctu.html}</p>
+			</li>
+			<li><p>Raspberry-Pi documentation  {https:<i></i>github.com<i>raspberrypi</i>documentatio}{https:<i></i>github.com<i>raspberrypi</i>documentatio}</p>
+			</li>
+			<li><p>Raspberry-Pi hardware https:<i></i>www.raspberrypi.org<i>documentation</i>hardware<i>raspberrypi</i>README.md}</p>
+			</li>
+		</ul>
+       
+       
+       
+    </div>
+
+    <div class="row">
+            <div class="col-md-6">
+                
+                <!-- Modal -->
+                <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        <h4 class="modal-title" id="myModalLabel">Contact Form</h4>
+                      </div>
+                      <div class="modal-body">
+                        
+                          <div class="form-group">
+                            <input type="text" value="" placeholder="Name" class="form-control" />
+                          </div>  
+
+                          <div class="form-group">
+                            <input type="text" value="" placeholder="Contact Number" class="form-control" />
+                          </div>
+
+                          <div class="form-group">
+                            <input type="text" value="" placeholder="Email-ID" class="form-control" />
+                          </div>        
+                        
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-default btn-simple" data-dismiss="modal">Close</button>
+                        <div class="divider"></div>
+                        <button type="button" class="btn btn-info btn-simple">Save</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+                
+            </div>
+    
+
+</body>
+
+    <script src="jquery/jquery-1.10.2.js" type="text/javascript"></script>
+	<script src="assets/js/jquery-ui-1.10.4.custom.min.js" type="text/javascript"></script>
+
+	<script src="bootstrap3/js/bootstrap.js" type="text/javascript"></script>
+	<script src="assets/js/gsdk-checkbox.js"></script>
+	<script src="assets/js/gsdk-radio.js"></script>
+	<script src="assets/js/gsdk-bootstrapswitch.js"></script>
+	<script src="assets/js/get-shit-done.js"></script>
+    <script src="assets/js/custom.js"></script>
+
+<script type="text/javascript">
+         
+    $('.btn-tooltip').tooltip();
+    $('.label-tooltip').tooltip();
+    $('.pick-class-label').click(function(){
+        var new_class = $(this).attr('new-class');  
+        var old_class = $('#display-buttons').attr('data-class');
+        var display_div = $('#display-buttons');
+        if(display_div.length) {
+        var display_buttons = display_div.find('.btn');
+        display_buttons.removeClass(old_class);
+        display_buttons.addClass(new_class);
+        display_div.attr('data-class', new_class);
+        }
+    });
+    $( "#slider-range" ).slider({
+		range: true,
+		min: 0,
+		max: 500,
+		values: [ 75, 300 ],
+	});
+	$( "#slider-default" ).slider({
+			value: 70,
+			orientation: "horizontal",
+			range: "min",
+			animate: true
+	});
+	$('.carousel').carousel({
+      interval: 4000
+    });
+      
+    
+</script>
+</html>
